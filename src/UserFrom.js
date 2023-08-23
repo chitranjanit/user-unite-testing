@@ -17,8 +17,8 @@ function UserForm({ onUserAdd }) {
         <input value={name} onChange={(e) => setName(e.target.value)} />
       </div>
       <div>
-        <label>Email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
+        <label htmlFor="email">Email</label>
+        <input id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
       <button>Add User</button>
     </form>
