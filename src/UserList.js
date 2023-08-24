@@ -14,7 +14,7 @@ function UserList({ users }) {
         <th>Name</th>
         <th>Email</th>
       </thead>
-      <tbody>{renderedUsers}</tbody>
+      <tbody data-testid="users">{renderedUsers}</tbody>
     </table>
   );
 }

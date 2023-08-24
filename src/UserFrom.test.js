@@ -24,7 +24,12 @@ test('it calls unUserAdd when the form is submitted', () => {
   render(<UserForm onUserAdd={mock} />);
 
   // Find the two inputs
-  const [nameInput, emailInput] = screen.getAllByRole('textbox');
+  const nameInput = screen.getByRole('textbox', {
+    name: /name/i,
+  });
+  const emailInput = screen.getByRole('textbox', {
+    name: /email/i,
+  });
 
   // Simulate typing in an name
   user.click(nameInput);
